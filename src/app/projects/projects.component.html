@@ -1,0 +1,18 @@
+<md-toolbar color="warning" fxLayout="row">
+    <span fxFlex="80" fxFlexAlign="start center">
+        <md-icon>view_headline</md-icon>
+        Projects Todo 
+        <md-icon>note_add</md-icon>
+    </span>
+    <span class="buttons" fxFlex="20" fxFlexAlign="end center">
+        <button md-raised-button>New Project</button>
+    </span>
+</md-toolbar>
+
+<div fxLayoutWrap fxLayout="row" fxLayoutGap="{{colMargin}}em" fxLayout.xs="column" class="projects">
+
+    <div fxFlex="calc({{colWidth}}% - {{colMargin}}em)" *ngFor="let project of projects">
+        <td-project [project]="project"></td-project>
+    </div>
+
+</div>
