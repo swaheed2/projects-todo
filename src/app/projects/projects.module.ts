@@ -1,32 +1,34 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { ProjectsComponent } from './projects.component';
-import { ProjectComponent } from './project.component';
+import { ProjectComponent, EditProjectDialog } from './project.component';
 
 /** Libraries */
-import { MdCardModule, MdCheckboxModule, 
-  MdInputModule, MdProgressBarModule, MdButtonModule, 
-  MdSlideToggleModule, MdMenuModule, MdToolbarModule, MdIconModule }
- from '@angular/material';
- 
- 
-import { FlexLayoutModule } from '@angular/flex-layout';
+import {
+  MdCardModule, MdCheckboxModule, MdDialogModule, MdInputModule, MdProgressBarModule,
+  MdSlideToggleModule, MdMenuModule
+} from '@angular/material';
+
+import { MaterialModule } from '../material';
 
 @NgModule({
   declarations: [
     ProjectsComponent,
-    ProjectComponent
+    ProjectComponent,
+    EditProjectDialog
   ],
+  entryComponents: [ EditProjectDialog ],
   imports: [
     CommonModule,
     FormsModule,
-    FlexLayoutModule,
+
+    /** Material Common */
+    MaterialModule,
 
     /** Material */
-    MdCardModule, MdCheckboxModule, MdInputModule, MdProgressBarModule, 
-    MdButtonModule, MdSlideToggleModule, MdMenuModule, MdToolbarModule, 
-    MdIconModule
+    MdCardModule, MdCheckboxModule, MdInputModule, MdProgressBarModule,
+    MdSlideToggleModule, MdMenuModule, MdDialogModule
   ],
   providers: [],
   exports: [ProjectsComponent]

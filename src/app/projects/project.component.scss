@@ -27,12 +27,14 @@
                 padding: 10px;
                 font-size: 1.2em;
                 position: relative;
+                border-bottom: .5px solid #ccc;
 
-                md-icon{
-                    font-size: .9em;
+                .actions{
+                    color:#424242;
                     position:absolute;
                     right: -10px;
                     top:5px;
+
                 }
             }
             & .mat-checkbox-checked{

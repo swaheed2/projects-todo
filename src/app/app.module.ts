@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AppComponent } from './app.component'; 
+import { AppComponent } from './app.component';
 
 /**  Modules */
-import { ProjectsModule } from './projects'
+import { ProjectsModule } from './projects';
+import { MaterialModule } from './material';
+import { MdSidenavModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,12 @@ import { ProjectsModule } from './projects'
     BrowserModule,
     FormsModule,
     HttpModule,
-    BrowserAnimationsModule, 
-    
+    BrowserAnimationsModule,
+
     /** Modules */
-    ProjectsModule
+    ProjectsModule,
+    MaterialModule,
+    MdSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

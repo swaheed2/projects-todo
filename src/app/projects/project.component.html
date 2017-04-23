@@ -17,7 +17,7 @@
                     <md-icon>invert_colors</md-icon>
                     <span>Change Color</span>
                 </button>
-                <button md-menu-item disabled>
+                <button md-menu-item (click)="editProject(project)">
                     <md-icon>spellcheck</md-icon>
                     <span>Edit Project</span>
                 </button>
@@ -30,15 +30,22 @@
     </md-card-header>
     <md-card-content class="body">
         <section class="items">
-            <md-checkbox 
+            <div 
                 class="item" 
-                name="item" 
-                [checked]="item.complete" 
-                (change)="checkItem($event,item)"
+                (mouseover)="item.actions = true;" (mouseleave)="item.actions = false;"
                 *ngFor="let item of project.items">
-                {{item.title}}
-                <md-icon (click)="editItem($evemt,item)">create</md-icon>
-            </md-checkbox>
+
+                <md-checkbox 
+                    class="check"  
+                    [checked]="item.complete" 
+                    (change)="checkItem($event,item)">
+                    {{item.title}}
+                </md-checkbox> 
+
+                <div class="actions" *ngIf="item.actions">
+                    <button md-icon-button (click)="editProject(item)"><md-icon >create</md-icon></button>
+                </div>
+            </div>
         </section>
     </md-card-content>
 </md-card>

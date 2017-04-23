@@ -1,1 +1,17 @@
-<td-projects></td-projects>
+<md-sidenav-container>
+    <md-sidenav #sidenav mode="push">
+        <!-- sidenav content -->
+    </md-sidenav>
+    <md-toolbar color="warning">
+        <span fxFlex="10">
+            <button md-icon-button (click)="sidenav.toggle()"><md-icon>view_headline</md-icon></button>
+        </span>
+        <span fxFlex="50" fxFlexAlign="center center">
+            Projects Todo 
+        </span>
+        <span class="buttons" fxFlex="40" fxFlexAlign="start start">
+            <button md-raised-button>New Project</button>
+        </span>
+    </md-toolbar>
+    <td-projects></td-projects>
+</md-sidenav-container>
