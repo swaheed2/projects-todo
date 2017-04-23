@@ -1,6 +1,6 @@
 # Projects Todo
  
-<a target="_blank" href="https://swaheed2.github.io/projects-todo/"><img src="images/screenshot.png" width="600" alt="Sky Blue"/></a>
+<a target="_blank" href="https://swaheed2.github.io/projects-todo/"><img src="images/screenshot.png" width="100%" alt="Projects Todo"/></a>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
