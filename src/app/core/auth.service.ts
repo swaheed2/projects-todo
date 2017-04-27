@@ -15,7 +15,7 @@ export class Auth {
 
     authorizeUser() {
         let asanaAuthUrl = "https://app.asana.com/-/oauth_authorize";
-        let callbackUrl = "http://localhost:4200/assets/auth-callback.html";
+        let callbackUrl = "https://swaheed2.github.io/projects-todo/assets/auth-callback.html";
         let clientId = "325590203801245";
         let otherInfo = "&response_type=token&state=somerandomstate";
         let windowObj = this.createWindow(`
