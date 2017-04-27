@@ -4,11 +4,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0
 
-## Current Features
+### Todo
 
-1. Change Project Colors
-
-<a target="_blank" href="https://swaheed2.github.io/projects-todo/"><img src="images/change-colors.gif" width="500px" alt="Projects Todo"/></a>
+- [X] Integration with Asana
+- [X] OAuth2 with Asana using Javascript window Communication 
+- [ ] Query Task List from Asana
 
 ## Development server
 

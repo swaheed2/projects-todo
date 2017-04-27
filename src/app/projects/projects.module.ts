@@ -9,6 +9,7 @@ import {
   MdCardModule, MdCheckboxModule, MdDialogModule, MdInputModule, MdProgressBarModule,
   MdSlideToggleModule, MdMenuModule
 } from '@angular/material';
+import { DragulaModule } from 'ng2-dragula';
 
 import { MaterialModule } from '../material';
 
@@ -25,6 +26,7 @@ import { MaterialModule } from '../material';
 
     /** Material Common */
     MaterialModule,
+    DragulaModule,
 
     /** Material */
     MdCardModule, MdCheckboxModule, MdInputModule, MdProgressBarModule,

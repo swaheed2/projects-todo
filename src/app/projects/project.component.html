@@ -29,11 +29,11 @@
         </div>
     </md-card-header>
     <md-card-content class="body">
-        <section class="items">
+        <section class="items" [dragula]="'items-bag'">
             <div 
-                class="item" 
+                class="item"  
                 (mouseover)="item.actions = true;" (mouseleave)="item.actions = false;"
-                *ngFor="let item of project.items">
+                *ngFor="let item of project.items"> 
 
                 <md-checkbox 
                     class="check"  
@@ -43,6 +43,7 @@
                 </md-checkbox> 
 
                 <div class="actions" *ngIf="item.actions">
+                    <button md-icon-button ><md-icon >sort</md-icon></button>
                     <button md-icon-button (click)="editProject(item)"><md-icon >create</md-icon></button>
                 </div>
             </div>

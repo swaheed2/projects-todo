@@ -10,7 +10,12 @@
             Projects Todo 
         </span>
         <span class="buttons" fxFlex="40" fxFlexAlign="start start">
-            <button md-raised-button>New Project</button>
+            <button md-icon-button *ngIf="!loggedIn" (click)="auth.authorizeUser()"> 
+               <md-icon>link</md-icon> Connect With Asana
+            </button>
+            <button md-icon-button color="primary" *ngIf="loggedIn">
+                <md-icon>account_circle</md-icon> Logged In
+            </button>
         </span>
     </md-toolbar>
     <td-projects></td-projects>
