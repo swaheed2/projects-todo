@@ -12,9 +12,6 @@
 
         function receiveMessage(event) {
             var origin = event.origin || event.originalEvent.origin; // For Chrome, the origin property is in the event.originalEvent object.
-            if (origin !== "http://localhost:4200")
-                return;
-
             if (event.data === "sendOauthLocaionHash") {
                 event.source.oauthLocaionHash = window.location.hash;
             }
